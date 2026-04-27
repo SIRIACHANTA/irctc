@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: whitesmoke;
+        gap: 20px;
+      }
+
+      header {
+        background: #f1f1f1;
+      }
+
+      .h5 {
+        text-align: center;
+        font-size: 13px;
+        margin: 0;
+        padding: 2px;
+        padding-top: 10px;
+        background: white;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 40px;
+        background: white;
+      }
+
+      .f {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .parent {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        list-style: none;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .menu li:first-child {
+        color: red;
+        padding-bottom: 3px;
+      }
+
+      .menu li:hover {
+        color: red;
+      }
+
+      button {
+        background: #2c4b8e;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .drop-down {
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        background: white;
+
+        width: 200px;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .loyalty {
+        background: #2c4b8e;
+        color: white !important;
+        padding: auto;
+      }
+
+      .menu li:hover .drop-down {
+        display: block;
+      }
+
+      .drop-down li {
+        padding: 5px 0;
+      }
+
+      .drop-down a {
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+      }
+
+      .hone {
+        text-align: right;
+        margin-top: 0;
+        padding-top: 5px;
+        padding-right: 15%;
+      }
+
+      .hfive {
+        text-align: right;
+        padding-right: 18%;
+      }
+
+      .container-box {
+        background-color: white;
+        width: 550px;
+        margin-left: 120px;
+        padding-top: 0;
+        padding-bottom: 5px;
+        box-shadow: 0 8px 10px rgba(45, 20, 250, 0.5);
+      }
+
+      .box {
+        display: flex;
+        gap: 5px;
+      }
+
+      .one,
+      .two {
+        width: 50%;
+        background-color: #2f4a7c;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .title {
+        text-align: center;
+        color: #2f4a7c;
+        letter-spacing: 2px;
+        padding-bottom: 1px;
+      }
+
+      .row1,
+      .row2 {
+        display: flex;
+        gap: 10px;
+        margin-top: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      .row3 {
+        padding: 20px;
+        padding-right: 50%;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-row {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 12px;
+      }
+
+      .butn1 {
+        display: block;
+        margin: 25px auto;
+        background-color: #f9732b;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 40%;
+      }
+
+      .first {
+        background-image: url("./irctc.jpg");
+        background-size: cover;
+        padding-bottom: 40px;
+        margin: 0;
+      }
+
+      .h1 {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .second,
+      .third {
+        background-color: white;
+        padding-bottom: 50px;
+        margin-bottom: 10px;
+      }
+
+      .ht {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container1 {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        padding-bottom: 50px;
+      }
+
+      .container2 {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      .circle {
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .circle:hover {
+        background-color: rgb(10, 10, 123);
+      }
+
+      .service span {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .service {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .box1,
+      .box2 {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+      }
+
+      .card-text {
+        font-size: 13px;
+      }
+
+      footer {
+        background-color: navy;
+        color: white;
+        padding: 2px;
+        font-family: sans-serif;
+        font-size: small;
+      }
+
+      .dropdown {
+        display: none;
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      li:hover .dropdown {
+        display: block;
+      }
+
+      a {
+        color: whitesmoke;
+      }
+
+      .dropdown li {
+        margin: 5px 0;
+      }
+
+      .col {
+        display: flex;
+        gap: 30px;
+      }
+
+      .fst,
+      .scnd,
+      .trd,
+      .foth,
+      .fif {
+        padding: 15px;
+      }
+
+      @media (max-width: 576px) {
+        .nav {
+          flex-direction: column;
+          align-items: center;
+          padding: 10px;
+        }
+
+        .f {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+        }
+
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+        .menu li {
+          font-size: 12px;
+        }
+        button {
+          width: 100%;
+          font-size: 12px;
+        }
+        .hone,
+        .hthree {
+          text-align: center;
+          padding: 0;
+          margin-top: 10px;
+        }
+        .container-box {
+          width: 95%;
+          margin: 15px auto;
+          padding: 10px;
+        }
+        .box {
+          flex-direction: column;
+        }
+        .one,
+        .two {
+          width: 100%;
+          padding: 5px;
+        }
+        .rowone,
+        .rowtwo,
+        .rowthree {
+          flex-direction: column;
+          gap: 10px;
+          padding-left: 0;
+          width: 100%;
+        }
+        input,
+        select {
+          width: 100%;
+          font-size: 12px;
+        }
+        .checkbox-row {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .butn1 {
+          width: 100%;
+        }
+        .container1,
+        .container2 {
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+        .circle {
+          width: 70px;
+          height: 70px;
+        }
+        .service span {
+          font-size: 12px;
+        }
+        .box1,
+        .box2 {
+          flex-direction: column;
+          align-items: center;
+        }
+        .card {
+          width: 95% !important;
+        }
+        .col {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .fst,
+        .scnd,
+        .trd,
+        .foth,
+        .fif {
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .nav {
+          padding: 10px 20px;
+        }
+        .menu {
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+        .container-box {
+          width: 80%;
+          margin: 20px auto;
+        }
+        .rowone,
+        .rowtwo,
+        .rowthree {
+          width: 100%;
+          padding-left: 0;
+        }
+        input,
+        select {
+          width: 100%;
+        }
+        .container1,
+        .container2 {
+          flex-wrap: wrap;
+          gap: 30px;
+        }
+        .box1,
+        .box2 {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .card {
+          width: 45% !important;
+        }
+        .col {
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h5 class="h5">05-Apr-2026 [14:59:32] | A - | A | A + | हिंदी</h5>
+
+      <div class="nav">
+        <img
+          src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png"
+        />
+
+        <div class="f">
+          <div class="parent">
+            <i class="fa-solid fa-house"></i>
+            <button>LOGIN / REGISTER</button>
+          </div>
+
+          <ul class="menu">
+            <li>
+              TRAINS
+              <ul class="drop-down">
+                <li><a href="">Book Ticket</a></li>
+                <li><a href="">Foreign Tourist Booking</a></li>
+                <li><a href="">Connecting Journey Booking</a></li>
+                <li><a href="">IRCTC Trains</a></li>
+                <li><a href="">Cancel E-Ticket</a></li>
+                <li><a href="">PNR Enquiry</a></li>
+                <li><a href="">Train Schedule</a></li>
+                <li><a href="">Track Your Train</a></li>
+                <li><a href="">FTR Coach /Train Booking</a></li>
+                <li><a href="">Dogs/Cats Booking</a></li>
+                <li><a href="">Link Your Aadhaar</a></li>
+                <li><a href="">Counter Ticket Cancellation</a></li>
+                <li><a href="">Counter Ticket Boarding Point Change</a></li>
+              </ul>
+            </li>
+
+            <li>
+              MEALS
+              <ul class="drop-down">
+                <li><a href="">Book Food E-Pantry</a></li>
+                <li><a href="">Order Food - E-Catering</a></li>
+                <li><a href="">Cooked Food Menu</a></li>
+              </ul>
+            </li>
+
+            <button>
+              <li class="loyalty">
+                LOYALTY
+                <ul class="drop-down">
+                  <li><a href="">About IRCTC Loyalty program</a></li>
+                  <li><a href="">Compare Co-brand Cards</a></li>
+                  <li><a href="">IRCTC SBI Credit Card</a></li>
+                  <li><a href="">IRCTC BOB Credit Card</a></li>
+                  <li><a href="">IRCTC HDFC Credit Card</a></li>
+                  <li><a href="">IRCTC RBL Credit Card</a></li>
+                  <li><a href="">Add Loyalty Account</a></li>
+                </ul>
+              </li>
+            </button>
+
+            <li>
+              E-WALLET
+              <ul class="drop-down">
+                <li><a href="">About IRCTC eWallet</a></li>
+                <li><a href="">IRCTC eWallet User Guide</a></li>
+              </ul>
+            </li>
+
+            <li>
+              OTHER SERVICES
+              <ul class="drop-down">
+                <li><a href="">IRCTC-iPAY</a></li>
+                <li><a href="">Buses</a></li>
+                <li><a href="">Flights</a></li>
+                <li><a href="">Hotels</a></li>
+                <li><a href="">Holidays</a></li>
+                <li><a href="">e-Wheelchair</a></li>
+                <li><a href="">Promotions</a></li>
+              </ul>
+            </li>
+
+            <li>ALERTS</li>
+            <li>CONTACT US</li>
+          </ul>
+        </div>
+
+        <img src="https://www.irctc.co.in/nget/assets/images/logo.png" />
+      </div>
+    </header>
+
+    <div class="first">
+      <h1 class="hone" style="color: darkblue">INDIAN RAILWAYS</h1>
+      <h5 class="hfive" style="color: darkblue">
+        Safety | Security | Punctuality
+      </h5>
+
+      <div class="container-box">
+        <div class="box">
+          <div class="one">PNR STATUS</div>
+          <div class="two">CHARTS / VACANCY</div>
+        </div>
+
+        <h2 class="title">BOOK TICKET</h2>
+
+        <div class="row1">
+          <input type="text" placeholder="From" />
+          <input type="text" placeholder="To" />
+        </div>
+
+        <div class="row2">
+          <input type="date" />
+          <select>
+            <option>All Classes</option>
+            <option>ALL CLASSES</option>
+            <option>Anubhuti Class (EA)</option>
+            <option>AC First Class (1A)</option>
+            <option>Vistadome AC (EV)</option>
+            <option>Exec. Chair Car (EC)</option>
+            <option>AC 2 Tier (2A)</option>
+            <option>First Class (FC)</option>
+            <option>AC 3 Tier (3A)</option>
+            <option>AC 3 Economy (3E)</option>
+            <option>AC Chair Car (CC)</option>
+            <option>Sleeper (SL)</option>
+            <option>Vistadome Non AC (VS)</option>
+            <option>Second Sitting (2S)</option>
+          </select>
+        </div>
+
+        <div class="row3">
+          <select>
+            <option>GENERAL</option>
+            <option>GENERAL</option>
+            <option>LADIES</option>
+            <option>LOWER BERTH/SR.CITIZEN</option>
+            <option>PERSON WITH DISABILITY</option>
+            <option>DUTY PASS</option>
+            <option>TATKAL</option>
+            <option>PREMIUM TATKAL</option>
+          </select>
+        </div>
+
+        <div class="checkbox-row">
+          <label
+            ><input type="checkbox" />
+            Person With Disability
+          </label>
+          <label
+            ><input type="checkbox" />
+            Flexible With Date
+          </label>
+          <label
+            ><input type="checkbox" />
+            Railway Pass
+          </label>
+        </div>
+
+
+
+        <a href="payment.html"><button class="butn1">Search Trains</button></a>
+      </div>
+    </div>
+
+    <div class="second">
+      <h1 class="ht">
+        Have you not found the right one? <br />
+        Find a service suitable for you here.
+      </h1>
+      <div class="container1">
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+          <span>Flights</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <span>Hotel</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <span>Rail Drishti</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-bell-concierge"></i>
+          </div>
+          <span>E-Catering</span>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <span>Holiday Package</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-train"></i>
+          </div>
+          <span>Tourist Train</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-mountain-sun"></i>
+          </div>
+          <span>Hill Railways</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-train-subway"></i>
+          </div>
+          <span>Charter Train</span>
+        </div>
+        <div class="service">
+          <div class="circle">
+            <i class="fa-solid fa-image"></i>
+          </div>
+          <span>Gallery</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="third">
+      <h1 class="h1">HOLIDAYS</h1>
+      <div class="box1">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.irctc.co.in/nget/assets/images/exterior.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Maharajas' Express</h5>
+            <p class="card-text">
+              Redefining Royalty, Luxury and Comfort, Maharajas' express takes
+              you on a sojourn to the era of bygone stately splendour of
+              princely states. Sylvan furnishings, elegant ambience and modern
+              amenities are amalgamated for an “Experience Unsurpassed”. It has
+              been a winner of “World’s Leading Luxury train” by World Travel
+              Awards consecutively for last six years.
+            </p>
+            <small class="text-muted">Read More-></small>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.irctc.co.in/nget/assets/images/Thailand.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">International Packages</h5>
+            <p class="card-text">
+              Best deals in International Holiday packages, handpicked by IRCTC,
+              for Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan,
+              Nepal, U.K., Europe, USA, Australia etc. The packages are
+              inclusive of sightseeing, meals, visa charges and overseas medical
+              insurance to give you a hassle-free and memorable experience.
+            </p>
+            <small class="text-muted">Read More-></small>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.irctc.co.in/nget/assets/images/Kashmir.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Domestic Air Packages</h5>
+            <p class="card-text">
+              Be it the spiritual devotee seeking blessings of Tirupati, Shirdi
+              or Mata Vaishno Devi or the leisure traveller wanting to relish
+              the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets
+              of Ladakh, Wonders of Himalayas, Serene lakes or Picturesque
+              Islands, IRCTC has it all. Discover India through IRCTC!
+            </p>
+            <small class="text-muted">Read More-></small>
+          </div>
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.irctc.co.in/nget/assets/images/Bharat_Gaurav.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">
+              Bharat Gaurav Tourist <br />
+              Train
+            </h5>
+            <p class="card-text">
+              IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier
+              accommodation on train specially designed to promote domestic
+              tourism in India. This train runs on various theme based circuits
+              covering pilgrimage and heritage destinations in its itinerary on
+              a 5 days to 20 days trip and showcase India’s rich cultural
+              heritage.
+            </p>
+            <small class="text-muted">Read More-></small>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://www.irctc.co.in/nget/assets/images/Manali.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Rail Tour Packages</h5>
+            <p class="card-text">
+              IRCTC offers Exclusive Rail tour packages with confirmed train
+              tickets, sight-seeing and meals for enchanting Nilgiri Mountains,
+              Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata
+              Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday
+              packages/ Land packages to these destinations are also available.
+            </p>
+            <small class="text-muted">Read More-></small>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="http://contents.irctc.co.in/en/HOME_BOTTOM_RIGHT.jpeg"
+            alt="..."
+          />
+          <!-- <div class="card-body">
+          <h5 class="card-title">Domestic Air Packages</h5>
+          <p class="card-text">
+            Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or
+            Mata Vaishno Devi or the leisure traveller wanting to relish the
+            Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets of
+            Ladakh, Wonders of Himalayas, Serene lakes or Picturesque Islands,
+            IRCTC has it all. Discover India through IRCTC!
+          </p>
+          <small class="text-muted">Read More-></small>
+        </div> -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="col">
+        <ul type="none" class="menu1">
+          <li class="fst">
+            IRCTC Trains
+            <ul type="none" class="dropdown">
+              <li><a href="">Salient Features</a></li>
+              <li><a href="">Ticket Cancellation Rules</a></li>
+              <li><a href="">Foreign Tourist T&C</a></li>
+              <li><a href="">Group Booking T&C</a></li>
+              <li><a href="">Travel Insurance Claim Process</a></li>
+            </ul>
+          </li>
+          <li class="scnd">
+            General Information
+            <ul type="none" class="dropdown">
+              <li><a href="">More info</a></li>
+              <li><a href="">FAQs</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Travel Insurance T&C</a></li>
+              <li><a href="">FTR T&C</a></li>
+              <li><a href="">Scheme for issue of waitlisted Eticket</a></li>
+              <li><a href="">Protect against fraudulent emails</a></li>
+              <li><a href="">General Guideline for SUVIDHA trains</a></li>
+              <li><a href="">Current booking Guidelines</a></li>
+              <li><a href="">Forgo Senior Citizen ConcessionFAQ</a></li>
+              <li><a href="">Trains at a Glance</a></li>
+              <li><a href="">Guidelines for Boarding Station change</a></li>
+              <li><a href="">Guideline for PASS Booking</a></li>
+            </ul>
+          </li>
+          <li class="trd">
+            Important Information
+            <ul type="none" class="dropdown">
+              <li><a href="">Bank Transaction Charges</a></li>
+              <li><a href="">Women Sr. Citizen Concession</a></li>
+              <li><a href="">VIKALP Scheme</a></li>
+              <li><a href="">Travel Insurance (Incl. of GST)</a></li>
+              <li><a href="">Browser Settings</a></li>
+            </ul>
+          </li>
+          <li class="foth">
+            Agents
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC Authorized Service Providers</a></li>
+              <li><a href="">Digital Certificate Generation Process</a></li>
+              <li><a href="">Blacklist Agent</a></li>
+              <li><a href="">Find NgeT Agents</a></li>
+              <li><a href="">Rules and Regulations for the Agents</a></li>
+              <li><a href="">Norms for RTSA</a></li>
+              <li><a href="">Norms for IATA</a></li>
+              <li><a href="">Norms for GSA</a></li>
+              <li><a href="">Norms for Internet Cafe Scheme</a></li>
+              <li><a href="">Norms for B2B Scheme</a></li>
+              <li><a href="">Norms for B2C & Mobile Scheme</a></li>
+              <li><a href="">Registration Form</a></li>
+              <li>
+                <a href=""
+                  >Cancellation refund process for tickets booked by agents</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="fif">
+            Enquiries
+            <ul type="none" class="dropdown">
+              <li><a href="">Reservation Enquiries</a></li>
+              <li><a href="">PNR Enquiry</a></li>
+              <li><a href="">Train Enquiry</a></li>
+              <li><a href="">Train/Fare Accommodation</a></li>
+              <li><a href="">Train Between Important Stations</a></li>
+              <li><a href="">Railway Enquiry139</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul type="none" class="menu2">
+          <li class="fst">
+            How To
+            <ul type="none" class="dropdown">
+              <li><a href="">Register</a></li>
+              <li><a href="">Book E-ticket (PDF) (VIDEO)</a></li>
+              <li><a href="">Book tatkal ticket</a></li>
+              <li>
+                <a href=""
+                  >Book Concession Tickets for Person With Disability</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="scnd">
+            IRCTC Official App
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC Rail Connect (Android)</a></li>
+              <li><a href="">IRCTC Rail Food (iOS)</a></li>
+              <li><a href="">IRCTC Order Food (Android)</a></li>
+              <li><a href="">IRCTC Tourism App</a></li>
+            </ul>
+          </li>
+          <li class="trd">
+            Advertise with us
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC Marketing Statistics</a></li>
+              <li><a href="">Banner-Advertisement</a></li>
+              <li><a href="">Advertisement Terms & Conditions</a></li>
+              <li><a href="">Banner Locations on IRCTC</a></li>
+            </ul>
+          </li>
+          <li class="foth">
+            Refund Rules
+            <ul type="none" class="dropdown">
+              <li><a href="">Ticket Cancellation & Refund Rules</a></li>
+              <li>
+                <a href=""
+                  >Gazette: Cancellation of Ticket and Refund Rules 2015</a
+                >
+              </li>
+              <li><a href="">Refund Rule of Suvidha Train</a></li>
+              <li><a href="">Banner Locations on IRCTC</a></li>
+              <li><a href="">process for tickets</a></li>
+            </ul>
+          </li>
+          <li class="fif">
+            Person With Disability Facilities
+            <ul type="none" class="dropdown">
+              <li>
+                <a href="">Facilities for Person With Disability Users</a>
+              </li>
+              <li><a href="">Facilities for Visually Impaired Users</a></li>
+              <li>
+                <a href="">User Guide: Person With Disability Booking</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul type="none" class="menu3">
+          <li class="fst">
+            E-Wallet
+            <ul type="none" class="dropdown">
+              <li><a href="">About</a></li>
+            </ul>
+          </li>
+          <li class="scnd">
+            IRCTC Co-branded Card Benefits
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC SBI Loyalty Program</a></li>
+              <li><a href="">IRCTC BOB Loyalty Program</a></li>
+              <li><a href="">IRCTC HDFC Loyalty Program</a></li>
+              <li><a href="">IRCTC RBL Loyalty Program</a></li>
+            </ul>
+          </li>
+          <li class="trd">
+            IRCTC-iPAY Payment Gateway
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC-iPAY (PDF) (VIDEO) AutoPay</a></li>
+            </ul>
+          </li>
+          <li class="foth">
+            IRCTC Zone
+            <ul type="none" class="dropdown">
+              <li><a href="">Jago yatri jago</a></li>
+              <li><a href="">Jansankhya Sthirata Kosh</a></li>
+              <li><a href="">Maharaja"s Express</a></li>
+            </ul>
+          </li>
+          <li class="fif">
+            DMRC Ticket Booking at IRCTC
+            <ul type="none" class="dropdown">
+              <li><a href="">User Guide</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul type="none" class="menu4">
+          <li class="fst">
+            For Newly Migrated Agents
+            <ul type="none" class="dropdown">
+              <li>
+                <a href="">Operating Manual for Agent Interface Application</a>
+              </li>
+              <li>
+                <a href="">Operating Manual for new e-ticketing website</a>
+              </li>
+              <li>
+                <a href=""> Operating Manual for Agent Interface Application</a>
+              </li>
+            </ul>
+          </li>
+          <li class="scnd">
+            Mobile Zone
+            <ul type="none" class="dropdown">
+              <li><a href="">IRCTC Android App </a></li>
+              <li><a href="">IRCTC Rail Connect</a></li>
+              <li><a href="">ClearTrip</a></li>
+              <li><a href="">Airtel</a></li>
+              <li><a href="">ClearTrip</a></li>
+              <li><a href="">Amazon India</a></li>
+              <li><a href="">Shop & Pay</a></li>
+              <li><a href="">Confirmtkt</a></li>
+              <li><a href="">EaseMyTrip </a></li>
+              <li><a href="">Flight, Hotel, Train</a></li>
+              <li><a href="">Google Pay </a></li>
+              <li><a href="">Goibibo</a></li>
+            </ul>
+          </li>
+          <li class="trd">
+            Policies
+            <ul type="none" class="dropdown"></ul>
+          </li>
+          <li class="foth">
+            Ask Disha Chatbot
+            <ul type="none" class="dropdown">
+              <li><a href="">Services of Ask Disha ChatBot</a></li>
+              <li><a href="">Features of Ask Disha ChatBot</a></li>
+            </ul>
+          </li>
+          <li class="fif">
+            About us
+            <ul type="none" class="dropdown">
+              <li><a href="">Awards & Achievements</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul type="none" class="menu5">
+          <li class="fst">Help & Support</li>
+          <li class="scnd">
+            Agents
+            <ul type="none" class="dropdown">
+              <li><a href="">Book E-Pantry Food</a></li>
+              <li><a href="">Cancel E-Pantry Food</a></li>
+              <li><a href="">E-Pantry Cancellation </a></li>
+              <li><a href="">Refund Rules</a></li>
+              <li><a href="">E-Pantry FAQs</a></li>
+            </ul>
+          </li>
+          <li class="trd">Tems & Conditions</li>
+        </ul>
+      </div>
+    </footer>
+
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+  </body>
+</html>

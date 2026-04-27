@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f9fc;
+      }
+
+      header {
+        background: #f1f1f1;
+      }
+
+      .h5 {
+        text-align: center;
+        font-size: 13px;
+        margin: 0;
+        padding: 4px 0;
+        background: white;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 40px;
+        background: white;
+      }
+
+      .f {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .parent {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .menu {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        list-style: none;
+        font-size: 14px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .menu li:first-child {
+        color: red;
+        padding-bottom: 3px;
+      }
+
+      .menu li:hover {
+        color: red;
+      }
+
+      button {
+        background: #2c4b8e;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .drop-down {
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        background: white;
+
+        width: 200px;
+        padding: 10px;
+        border-radius: 6px;
+        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+      }
+      .loyalty {
+        background: #2c4b8e;
+        color: white !important;
+        padding: 6px 12px;
+      }
+      .menu li:hover .drop-down {
+        display: block;
+      }
+
+      .drop-down li {
+        padding: 5px 0;
+      }
+
+      .drop-down a {
+        text-decoration: none;
+        color: black;
+        font-size: 13px;
+      }
+
+      img {
+        height: 45px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h5 class="h5">05-Apr-2026 [14:59:32] | A - | A | A + | हिंदी</h5>
+
+      <div class="nav">
+        <img
+          src="https://www.irctc.co.in/nget/assets/images/secondry-logo.png"
+        />
+
+        <div class="f">
+          <div class="parent">
+            <i class="fa-solid fa-house"></i>
+            <button>LOGIN / REGISTER</button>
+          </div>
+
+          <ul class="menu">
+            <li>
+              TRAINS
+              <ul class="drop-down">
+                <li><a href="">Book Ticket</a></li>
+                <li><a href="">Foreign Tourist Booking</a></li>
+                <li><a href="">Connecting Journey Booking</a></li>
+                <li><a href="">IRCTC Trains</a></li>
+                <li><a href="">Cancel E-Ticket</a></li>
+                <li><a href="">PNR Enquiry</a></li>
+                <li><a href="">Train Schedule</a></li>
+                <li><a href="">Track Your Train</a></li>
+                <li><a href="">FTR Coach /Train Booking</a></li>
+                <li><a href="">Dogs/Cats Booking</a></li>
+                <li><a href="">Link Your Aadhaar</a></li>
+                <li><a href="">Counter Ticket Cancellation</a></li>
+                <li><a href="">Counter Ticket Boarding Point Change</a></li>
+              </ul>
+            </li>
+
+            <li>
+              MEALS
+              <ul class="drop-down">
+                <li><a href="">Book Food E-Pantry</a></li>
+                <li><a href="">Order Food - E-Catering</a></li>
+                <li><a href="">Cooked Food Menu</a></li>
+              </ul>
+            </li>
+
+            <button>
+              <li class="loyalty">
+                LOYALTY
+                <ul class="drop-down">
+                  <li><a href="">About IRCTC Loyalty program</a></li>
+                  <li><a href="">Compare Co-brand Cards</a></li>
+                  <li><a href="">IRCTC SBI Credit Card</a></li>
+                  <li><a href="">IRCTC BOB Credit Card</a></li>
+                  <li><a href="">IRCTC HDFC Credit Card</a></li>
+                  <li><a href="">IRCTC RBL Credit Card</a></li>
+                  <li><a href="">Add Loyalty Account</a></li>
+                </ul>
+              </li>
+            </button>
+
+            <li>
+              E-WALLET
+              <ul class="drop-down">
+                <li><a href="">About IRCTC eWallet</a></li>
+                <li><a href="">IRCTC eWallet User Guide</a></li>
+              </ul>
+            </li>
+
+            <li>
+              OTHER SERVICES
+              <ul class="drop-down">
+                <li><a href="">IRCTC-iPAY</a></li>
+                <li><a href="">Buses</a></li>
+                <li><a href="">Flights</a></li>
+                <li><a href="">Hotels</a></li>
+                <li><a href="">Holidays</a></li>
+                <li><a href="">e-Wheelchair</a></li>
+                <li><a href="">Promotions</a></li>
+              </ul>
+            </li>
+
+            <li>ALERTS</li>
+            <li>CONTACT US</li>
+          </ul>
+        </div>
+
+        <img src="https://www.irctc.co.in/nget/assets/images/logo.png" />
+      </div>
+    </header>
+  </body>
+</html>

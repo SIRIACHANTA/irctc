@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+.tcontainer {
+  width: 900px;
+  margin: 30px auto;
+  background: white;
+  border: 1px solid #ccc;
+}
+.header {
+  background:lightblue;
+  padding: 10px;
+  font-weight: bold;
+  color: #31708f;
+}
+.section {
+  padding: 20px;
+  border-top: 1px solid lightcyan;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.table {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.table th, .table td {
+  border: 1px solid gray;
+  padding: 8px;
+  text-align: center;
+}
+.table th {
+  background: rgb(178, 218, 230);
+}
+  .buttons {
+  text-align: center;
+  padding: 15px;
+}
+.btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background: lightskyblue;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+  </style>
+</head>
+<body>
+    
+<div class="tcontainer">
+  <div class="header">
+    Congratulations! You have successfully booked a ticket. Please print the ERS and carry it along with a relevant photo ID card while traveling.
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div><span class="label">Transaction ID:</span> 200000014834308</div>
+      <div><span class="label">PNR No:</span> 2433499211</div>
+      <div><span class="label">Train:</span> 12952 Kerala Express</div>
+    </div>
+    <div class="row">
+      <!-- <div><span class="label">Date of Booking:</span> 24-Jan-2014</div> -->
+      <div><span class="label">Class:</span> THIRD AC</div>
+      <div><span class="label">Quota:</span> GENERAL</div>
+    </div>
+    <div class="row">
+      <!-- <div><span class="label">Date of Journey:</span> 30-Jan-2014</div> -->
+      <div><span class="label">From:</span>Vijayawada</div>
+      <div><span class="label">To:</span> kerala</div>
+    </div>
+    <div class="row">
+      <!-- <div><span class="label">Boarding At:</span> NDLS</div> -->
+      <div><span class="label">Departure:</span> 16:30</div>
+      <div><span class="label">Arrival:</span> 31-may-2026 (08:35)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Passenger Details</h3>
+    <table class="table">
+      <tr>
+        <th>Sl No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Meal</th>
+        <th>Status</th>
+        <th>Coach</th>
+        <th>Seat</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Jahnavi</td>
+        <td>21</td>
+        <td>Female</td>
+        <td>NonVeg</td>
+        <td>CNF</td>
+        <td>B4</td>
+        <td>64 (UB)</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Siri</td>
+        <td>21</td>
+        <td>Female</td>
+        <td>NonVeg</td>
+        <td>CNF</td>
+        <td>B4</td>
+        <td>65 (UB)</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="buttons">
+    <button class="btn">Print ERS (English)</button>
+    <button class="btn">Print ERS (Hindi)</button>
+    <br>
+    <button class="btn">Book Return Ticket</button>
+    <button class="btn">Book Another Ticket</button>
+  </div>
+</div>
+
+</body>
+</html>
